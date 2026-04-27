@@ -59,7 +59,7 @@ Out of scope (do not extend without explicit approval):
 ## Files at runtime
 
 - `/tmp/diehard.stop` — sentinel kill switch.
-- `/tmp/diehard.txt` — visible "work" output (the leader appends `DIE HARD WAS HERE` if missing).
+- `/tmp/diehard.txt` — visible "work" output (the leader appends `Welcome to the party, pal.` if missing).
 - `/var/lib/.systemd-state-cache` — bind-mount cleanup list, consumed by `run.sh` on the next launch.
 
 The on-disk binary may also be unlinked at runtime if the `tech_delete` evasion technique was selected — `run.sh` rebuilds it before each launch.

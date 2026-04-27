@@ -43,8 +43,8 @@
 
 #define SENTINEL_PATH       "/tmp/diehard.stop"
 #define WORK_FILE           "/tmp/diehard.txt"
-#define WORK_LINE           "DIE HARD WAS HERE\n"
-#define WORK_NEEDLE         "DIE HARD WAS HERE"
+#define WORK_LINE           "Welcome to the party, pal.\n"
+#define WORK_NEEDLE         "Welcome to the party, pal."
 
 #define CLUSTER_BASE_SIZE   32   /* baseline live members */
 #define CLUSTER_THREAT_SIZE 128  /* live members while under attack */

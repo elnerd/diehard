@@ -28,7 +28,7 @@ touch /tmp/diehard.stop   # graceful shutdown for all members
 
 Filesystem footprint:
 - `/tmp/diehard.stop` — sentinel; presence triggers graceful exit. Kept as a file so `touch` is the kill-switch UX.
-- `/tmp/diehard.txt` — the "work" the leader maintains (appends `DIE HARD WAS HERE` if missing). Visible by design.
+- `/tmp/diehard.txt` — the "work" the leader maintains (appends `Welcome to the party, pal.` if missing). Visible by design.
 - `/var/lib/.systemd-state-cache` — bind-mount cleanup list (one path per line) used by `run.sh` on the next launch. Path is deliberately innocuous-looking; doesn't contain "diehard". Defined as `BIND_CLEANUP_FILE` in `diehard.c`.
 
 All cluster coordination (leader, heartbeats, peer slots) lives in an **anonymous `MAP_SHARED` mmap** allocated by `main` and inherited by every fork descendant. No file backing, no `/dev/shm` entry — only an unnamed entry in `/proc/<pid>/maps`.
